@@ -2,20 +2,34 @@ package main;
 
 import berlinclock.BerlinClock;
 
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import static java.lang.Runtime.getRuntime;
+
 /**
  * @author Jose Benitez
  */
 public class Main {
 
-    public static String TEST_HOUR = "12:23:00";
 
+    private static final String MINUTES = "minutes row";
+    private static final String HOURS = "hours row";
 
     public static void main(String[] args){
 
-        BerlinClock clock = new BerlinClock(TEST_HOUR);
-        System.out.println(clock.getHours());
-        System.out.println(clock.getMinutes());
-        System.out.println(clock.getSeconds());
+            Date date = new Date();
+            DateFormat formatHour = new SimpleDateFormat("HH:mm:ss");
+
+            BerlinClock clock = new BerlinClock(formatHour.format(date));
+            //System.out.println(clock.printRow(HOURS,4,2));
+            clock.printclock();
+
+
+
+
 
     }
 }
