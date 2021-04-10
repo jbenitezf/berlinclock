@@ -2,12 +2,9 @@ package main;
 
 import berlinclock.BerlinClock;
 
-import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import static java.lang.Runtime.getRuntime;
 
 /**
  * @author Jose Benitez
